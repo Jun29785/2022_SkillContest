@@ -92,7 +92,7 @@ public class FinishManager : MonoBehaviour
             Destroy(RankGrid.GetChild(i).gameObject);
         }
             
-        GameManager.Instance.Ranks.Reverse();
+        GameManager.Instance.Ranks.Sort((a,b)=>b.Score.CompareTo(a.Score));
         GameObject obj;
         if (GameManager.Instance.Ranks.Count > 5)
         {
