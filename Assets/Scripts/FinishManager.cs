@@ -99,6 +99,7 @@ public class FinishManager : MonoBehaviour
             for (int i = 0; i < 5; i++)
             {
                 obj = Instantiate(RankPrefab);
+                obj.GetComponent<RankPrefabs>().Rank = i + 1;
                 obj.GetComponent<RankPrefabs>().Score = GameManager.Instance.Ranks[i].Score;
                 obj.GetComponent<RankPrefabs>().Name = GameManager.Instance.Ranks[i].Name;
                 obj.transform.parent = RankGrid;
@@ -109,6 +110,7 @@ public class FinishManager : MonoBehaviour
             for (int i = 0; i < GameManager.Instance.Ranks.Count; i++)
             {
                 obj = Instantiate(RankPrefab);
+                obj.GetComponent<RankPrefabs>().Rank = i + 1;
                 obj.GetComponent<RankPrefabs>().Score = GameManager.Instance.Ranks[i].Score;
                 obj.GetComponent<RankPrefabs>().Name = GameManager.Instance.Ranks[i].Name;
                 obj.transform.parent = RankGrid;
